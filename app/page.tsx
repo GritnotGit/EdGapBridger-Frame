@@ -5,30 +5,37 @@ import { NEXT_PUBLIC_URL } from './config';
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: 'Story time',
+      action: 'link',
+      label: 'get to know us',
+      target: `https://www.youtube.com/watch?v=ksd86Tx5RGs`,
     },
     {
-      action: 'tx',
-      label: 'Send Base Sepolia',
-      target: `${NEXT_PUBLIC_URL}/api/tx`,
-      postUrl: `${NEXT_PUBLIC_URL}/api/tx-success`,
+      action: 'link',
+      label: 'project introduction',
+      target: `https://sso-projects.my.canva.site`,
+    },
+    {
+      // action: '',
+      label: 'mint to donate',
+      // target: `${NEXT_PUBLIC_URL}/api/tx`,
+      
     },
   ],
   image: {
-    src: `${NEXT_PUBLIC_URL}/park-3.png`,
+    src: `${NEXT_PUBLIC_URL}/SSO_pic.png`,
     aspectRatio: '1:1',
   },
   input: {
-    text: 'Tell me a story',
+    text: 'Donate To Empower Students!'
   },
   postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
 });
 
 export const metadata: Metadata = {
-  title: 'zizzamia.xyz',
+  title: 'Schulfundraiser',
   description: 'LFG',
   openGraph: {
-    title: 'zizzamia.xyz',
+    title: 'Schulfundraiser',
     description: 'LFG',
     images: [`${NEXT_PUBLIC_URL}/park-1.png`],
   },
@@ -40,7 +47,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1>zizzamia.xyz</h1>
+      <h1>Schulfundraiser</h1>
     </>
   );
 }
