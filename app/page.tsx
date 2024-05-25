@@ -7,12 +7,12 @@ const frameMetadata = getFrameMetadata({
     {
       action: 'link',
       label: 'get to know us',
-      target: `https://youtube.com/clip/UgkxH_D2DdkYjKQB-qHir0AzL6NQL5OjqQkf?feature=shared`,
+      target: `${NEXT_PUBLIC_URL}/get-to-know-us`, // Interne Seite für YouTube-Video
     },
     {
       action: 'link',
       label: 'mint project',
-      target: `https://zora.co/collect/base:0xb1031d5f7e02de0481ec1c2743409fb6534401e9`,
+      target: `${NEXT_PUBLIC_URL}/mint-project`, // Interne Seite für Mint Project
     },
     {
       action: 'link',
@@ -53,7 +53,7 @@ const Page: React.FC = () => {
         <iframe 
           width="560" 
           height="315" 
-          src="https://youtube.com/embed/UgkxH_D2DdkYjKQB-qHir0AzL6NQL5OjqQkf?feature=shared" 
+          src="https://www.youtube.com/embed/UgkxH_D2DdkYjKQB-qHir0AzL6NQL5OjqQkf?feature=shared" 
           title="YouTube video player" 
           frameBorder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -63,6 +63,7 @@ const Page: React.FC = () => {
       <div>
         <h2>Mint Project</h2>
         <p>
+          Learn more about our Mint Project and how you can get involved.
           <a href="https://zora.co/collect/base:0xb1031d5f7e02de0481ec1c2743409fb6534401e9" target="_blank" rel="noopener noreferrer">
             Visit Mint Project
           </a>
