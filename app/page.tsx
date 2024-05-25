@@ -7,12 +7,12 @@ const frameMetadata = getFrameMetadata({
     {
       action: 'link',
       label: 'get to know us',
-      target: `https://www.youtube.com/watch?v=ksd86Tx5RGs`,
+      target: `https://youtube.com/clip/UgkxH_D2DdkYjKQB-qHir0AzL6NQL5OjqQkf?feature=shared`,
     },
     {
       action: 'link',
-      label: 'project introduction',
-      target: `https://sso-projects.my.canva.site`,
+      label: 'mint project',
+      target: `https://zora.co/collect/base:0xb1031d5f7e02de0481ec1c2743409fb6534401e9https://sso-projects.my.canva.site`,
     },
     {
       // action: '',
