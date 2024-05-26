@@ -8,26 +8,17 @@ const frameMetadata = getFrameMetadata({
   buttons: [
     {
       action: 'link',
-      label: 'PoConcept',
-      target: 'https://edgapbridger-2-day-hacka-06zz8ib.gamma.site/',
-    },
-    {
-      action: 'link',
       label: 'Dev - Youth Matching',
-      target: 'http://localhost:3000', // Link to the local signup form for developers and youth
+      target: 'https://developer-connect-vwxu15e.gamma.site/',
     },
     {
       action: 'link',
-      label: 'Fundraise',
-      target: 'http://localhost:3001', // Link to the local signup form for sponsors and supporters
+      label: 'Call for Action',
+      target: 'https://developer-connect-vwxu15e.gamma.site/sponsor',
     },
   ],
-  image: {
-    src: `${NEXT_PUBLIC_URL}/SSO_pic.png`,
-    aspectRatio: '1:1',
-  },
   input: {
-    text: 'Donate To Empower Students!',
+    text: 'EdGapBridger - Dev-Youth Matching Hack',
   },
   postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
 });
@@ -40,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'EdGapBridger',
     description: 'ETHBerlin04 Hackathon Project - EdGapBridger',
-    images: [`${NEXT_PUBLIC_URL}/park-1.png`],
+    images: [],
   },
   other: {
     ...frameMetadata,
@@ -53,30 +44,30 @@ const Page: React.FC = () => {
       <h1>EdGapBridger</h1>
       <div>
         <h2>Hackathon Concept</h2>
+        <iframe
+          src="https://edgapbridger-2-day-hacka-06zz8ib.gamma.site/"
+          width="100%"
+          height="600px"
+          frameBorder="0"
+          style={{ border: 'none' }}
+          allowFullScreen
+        ></iframe>
+      </div>
+      <div>
+        <h2>For Dev - Youth Matching</h2>
         <p>
-          Learn more about our hackathon concept and how you can participate.
-          <a href="https://edgapbridger-2-day-hacka-06zz8ib.gamma.site/" target="_blank" rel="noopener noreferrer">
-            Visit the Hackathon Website
+          <a href="https://developer-connect-vwxu15e.gamma.site/" target="_blank" rel="noopener noreferrer">
+            Visit Dev - Youth Matching
           </a>
         </p>
       </div>
       <div>
-        <h2>For Dev - Youth Matching</h2>
-        <iframe 
-          src="http://localhost:3000" 
-          width="600" 
-          height="800" 
-          frameBorder="0">
-        </iframe>
-      </div>
-      <div>
-        <h2>Fundraise</h2>
-        <iframe 
-          src="http://localhost:3001" 
-          width="600" 
-          height="800" 
-          frameBorder="0">
-        </iframe>
+        <h2>Call for Action</h2>
+        <p>
+          <a href="https://developer-connect-vwxu15e.gamma.site/sponsor" target="_blank" rel="noopener noreferrer">
+            Call for Action
+          </a>
+        </p>
       </div>
     </div>
   );
