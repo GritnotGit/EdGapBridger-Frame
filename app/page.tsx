@@ -1,6 +1,6 @@
 import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
-import { NEXT_PUBLIC_URL } from './config';
+import { NEXT_PUBLIC_URL } from './config'; // Stelle sicher, dass diese Variable korrekt importiert wird
 
 const frameMetadata = getFrameMetadata({
   buttons: [
