@@ -18,7 +18,7 @@ const frameMetadata = getFrameMetadata({
     },
   ],
   image: {
-    src: 'https://your-image-url.com/valid-image.jpg', // Ersetzen Sie dies durch die URL eines gültigen Bildes
+    src: `${NEXT_PUBLIC_URL}/image.png`,
     aspectRatio: '1:1',
   },
   input: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'EdGapBridger',
     description: 'ETHBerlin04 Hackathon Project - EdGapBridger',
-    images: ['https://your-image-url.com/valid-image.jpg'], // Ersetzen Sie dies durch die URL eines gültigen Bildes
+    images: [`${NEXT_PUBLIC_URL}/image.png`],
   },
   other: {
     ...frameMetadata,
