@@ -1,23 +1,25 @@
 import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
-import { NEXT_PUBLIC_URL } from './config'; // Der Import der Konfiguration
+import { NEXT_PUBLIC_URL } from './config'; // Import the configuration
+import React from 'react';
 
+// Frame metadata with customized buttons and links
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
       action: 'link',
-      label: 'get to know us',
-      target: `https://youtube.com/clip/UgkxH_D2DdkYjKQB-qHir0AzL6NQL5OjqQkf?feature=shared`,
+      label: 'PoConcept',
+      target: 'https://edgapbridger-2-day-hacka-06zz8ib.gamma.site/',
     },
     {
       action: 'link',
-      label: 'mint project',
-      target: `https://zora.co/collect/base:0xb1031d5f7e02de0481ec1c2743409fb6534401e9`,
+      label: 'Dev - Youth Matching',
+      target: 'http://localhost:3000', // Link to the local signup form for developers and youth
     },
     {
       action: 'link',
-      label: 'Donation',
-      target: `https://fv.sophie-scholl-schule.eu/verein/wie-kann-ich-spenden`,
+      label: 'Fundraise',
+      target: 'http://localhost:3001', // Link to the local signup form for sponsors and supporters
     },
   ],
   image: {
@@ -25,18 +27,19 @@ const frameMetadata = getFrameMetadata({
     aspectRatio: '1:1',
   },
   input: {
-    text: 'Donate To Empower Students!'
+    text: 'Donate To Empower Students!',
   },
   postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
 });
 
+// Metadata for the page
 export const metadata: Metadata = {
-  title: 'Schulfundraiser',
-  description: 'School Project Mint',
+  title: 'EdGapBridger',
+  description: 'ETHBerlin04 Hackathon Project - EdGapBridger',
   metadataBase: new URL(NEXT_PUBLIC_URL),
   openGraph: {
-    title: 'Schulfundraiser',
-    description: 'School Project Mint',
+    title: 'EdGapBridger',
+    description: 'ETHBerlin04 Hackathon Project - EdGapBridger',
     images: [`${NEXT_PUBLIC_URL}/park-1.png`],
   },
   other: {
@@ -46,40 +49,37 @@ export const metadata: Metadata = {
 
 const Page: React.FC = () => {
   return (
-    <>
-      <h1>Schulfundraiser</h1>
+    <div>
+      <h1>EdGapBridger</h1>
       <div>
-        <h2>Get to Know Us</h2>
-        <iframe 
-          width="560" 
-          height="315" 
-          src="https://youtube.com/embed/UgkxH_D2DdkYjKQB-qHir0AzL6NQL5OjqQkf?feature=shared" 
-          title="YouTube video player" 
-          frameBorder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowFullScreen>
-        </iframe>
-      </div>
-      <div>
-        <h2>Mint Project</h2>
+        <h2>Hackathon Concept</h2>
         <p>
-          Learn more about our Mint Project and how you can get involved.
-          <a href="https://zora.co/collect/base:0xb1031d5f7e02de0481ec1c2743409fb6534401e9" target="_blank" rel="noopener noreferrer">
-            Visit Mint Project
+          Learn more about our hackathon concept and how you can participate.
+          <a href="https://edgapbridger-2-day-hacka-06zz8ib.gamma.site/" target="_blank" rel="noopener noreferrer">
+            Visit the Hackathon Website
           </a>
         </p>
       </div>
       <div>
-        <h2>Donation</h2>
+        <h2>For Dev - Youth Matching</h2>
         <iframe 
-          src="https://fv.sophie-scholl-schule.eu/verein/wie-kann-ich-spenden" 
-          width="560" 
-          height="315" 
+          src="http://localhost:3000" 
+          width="600" 
+          height="800" 
           frameBorder="0">
         </iframe>
       </div>
-    </>
+      <div>
+        <h2>Fundraise</h2>
+        <iframe 
+          src="http://localhost:3001" 
+          width="600" 
+          height="800" 
+          frameBorder="0">
+        </iframe>
+      </div>
+    </div>
   );
-}
+};
 
 export default Page;
