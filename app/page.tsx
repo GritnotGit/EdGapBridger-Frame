@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'EdGapBridger',
     description: 'ETHBerlin04 Hackathon Project - EdGapBridger',
-    images: [`${NEXT_PUBLIC_URL}/image.png`], // Ensure this points to the correct image URL
+    images: [`${NEXT_PUBLIC_URL}public/image.png`], // Ensure this points to the correct image URL
   },
   other: {
     ...frameMetadata,
