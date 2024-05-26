@@ -17,6 +17,10 @@ const frameMetadata = getFrameMetadata({
       target: 'https://developer-connect-vwxu15e.gamma.site/sponsor',
     },
   ],
+  image: {
+    src: '', // Sie können hier eine leere Zeichenfolge oder einen gültigen Bild-URL-Wert verwenden
+    aspectRatio: '1:1',
+  },
   input: {
     text: 'EdGapBridger - Dev-Youth Matching Hack',
   },
