@@ -18,7 +18,7 @@ const frameMetadata = getFrameMetadata({
     },
   ],
   image: {
-    src: 'https://edgapbridger-2-day-hacka-06zz8ib.gamma.site/your-image.jpg', // Ersetzen Sie dies durch die URL eines gültigen Bildes
+    src: 'https://your-image-url.com/valid-image.jpg', // Ersetzen Sie dies durch die URL eines gültigen Bildes
     aspectRatio: '1:1',
   },
   input: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'EdGapBridger',
     description: 'ETHBerlin04 Hackathon Project - EdGapBridger',
-    images: ['https://edgapbridger-2-day-hacka-06zz8ib.gamma.site/your-image.jpg'], // Ersetzen Sie dies durch die URL eines gültigen Bildes
+    images: ['https://your-image-url.com/valid-image.jpg'], // Ersetzen Sie dies durch die URL eines gültigen Bildes
   },
   other: {
     ...frameMetadata,
@@ -48,14 +48,12 @@ const Page: React.FC = () => {
       <h1>EdGapBridger</h1>
       <div>
         <h2>Hackathon Concept</h2>
-        <iframe
-          src="https://edgapbridger-2-day-hacka-06zz8ib.gamma.site/"
-          width="100%"
-          height="600px"
-          frameBorder="0"
-          style={{ border: 'none' }}
-          allowFullScreen
-        ></iframe>
+        <p>
+          Learn more about our hackathon concept and how you can participate.
+          <a href="https://edgapbridger-2-day-hacka-06zz8ib.gamma.site/" target="_blank" rel="noopener noreferrer">
+            Visit the Hackathon Website
+          </a>
+        </p>
       </div>
       <div>
         <h2>For Dev - Youth Matching</h2>
