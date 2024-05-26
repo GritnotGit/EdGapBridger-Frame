@@ -18,7 +18,7 @@ const frameMetadata = getFrameMetadata({
     },
   ],
   image: {
-    src: '', // Sie können hier eine leere Zeichenfolge oder einen gültigen Bild-URL-Wert verwenden
+    src: 'https://edgapbridger-2-day-hacka-06zz8ib.gamma.site/your-image.jpg', // Ersetzen Sie dies durch die URL eines gültigen Bildes
     aspectRatio: '1:1',
   },
   input: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'EdGapBridger',
     description: 'ETHBerlin04 Hackathon Project - EdGapBridger',
-    images: [],
+    images: ['https://edgapbridger-2-day-hacka-06zz8ib.gamma.site/your-image.jpg'], // Ersetzen Sie dies durch die URL eines gültigen Bildes
   },
   other: {
     ...frameMetadata,
